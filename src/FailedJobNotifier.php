@@ -8,7 +8,7 @@ use Spatie\FailedJobMonitor\Senders\Sender;
 
 class FailedJobNotifier
 {
-    public function notifyIfJobFailed(string $sender)
+    public function notifyIfJobFailed($sender)
     {
         $sender = $this->getChannelInstance($sender);
 
@@ -18,7 +18,7 @@ class FailedJobNotifier
         });
     }
 
-    protected function getChannelInstance(string $sender) : Sender
+    protected function getChannelInstance($sender)
     {
         $className = '\Spatie\FailedJobMonitor\Senders\\'.ucfirst($sender).'Sender';
 
