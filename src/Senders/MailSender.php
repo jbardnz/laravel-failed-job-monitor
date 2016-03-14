@@ -13,7 +13,7 @@ class MailSender implements Sender
         $this->mailer = $mailer;
     }
 
-    public function send(string $failedJobData)
+    public function send($failedJobData)
     {
         $config = config('laravel-failed-job-monitor.mail');
 

@@ -14,7 +14,7 @@ class SlackSender implements Sender
         $this->slack = $slack;
     }
 
-    public function send(string $failedJobData)
+    public function send($failedJobData)
     {
         $config = config('laravel-failed-job-monitor.slack');
         $message = 'A queued job has failed on '.config('app.url');
