@@ -21,7 +21,6 @@
         }
     ],
     "require": {
-        "php" : "^5.5",
         "illuminate/queue": "^5.2"
     },
     "require-dev": {
